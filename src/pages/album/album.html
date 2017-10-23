@@ -1,0 +1,22 @@
+<h1>{{album.title}}</h1>
+<div class="grid">
+    <div ng-repeat="video in album.videos" class="grid-item grid-item--sm-span-4 grid-item--xs-span-4 grid-item--md-span-4 grid-item--lg-span-3">
+        <div class="video-container">
+            <iframe width="560" height="315" ng-src="{{album.trustThis(video)}}" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+<button class="add-button" ng-click="album.modalPopup()" ng-if="!album.showModal">Add new +</button>
+<div class="modal" ng-if="album.showModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close" ng-click="album.modalPopup()">&times;</span>
+            <h2>Add link</h2>
+        </div>
+        <div class="modal-body">
+            <input type="text" id="fname" name="firstname" placeholder="Youtube url" ng-model="album.url">
+            <input type="submit" value="Submit" ng-click="album.addVideo()">
+        </div>
+    </div>
+</div>

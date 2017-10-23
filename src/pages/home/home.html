@@ -1,0 +1,10 @@
+<div class="grid">
+    <div class="grid-item grid-item--sm-span-6 grid-item--xs-span-12 grid-item--md-span-6 grid-item--lg-span-2" ng-repeat="album in home.albums">
+        <div class="card" ui-sref="album({ name: album.name.toLowerCase() })">
+            <div class="card--content">
+                <h1>{{album.name}}</h1>
+                <span>{{album.description}}</span>
+            </div>
+        </div>        
+    </div>
+</div>

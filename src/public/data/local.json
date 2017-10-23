@@ -1,0 +1,9 @@
+[{
+        "name": "Pop",
+        "description": "Popular pop songs"
+    },
+    {
+        "name": "Trailers",
+        "description": "Movie trailers"
+    }
+]
